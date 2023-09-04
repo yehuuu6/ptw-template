@@ -1,0 +1,10 @@
+{
+    "require-dev": {
+        "symfony/dotenv": "^6.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Components\\": "components/"
+        }
+    }
+}
