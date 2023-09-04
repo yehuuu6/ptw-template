@@ -10,7 +10,7 @@
 
 ### 📦 Installation
 
-1. Clone the repository into your apache htdocs folder.
+1. Clone the repository into your Apache htdocs folder.
 2. Start your Apache server using XAMPP or any other server.
 3. Run `composer install` to install Symfony Dotenv.
 4. Run `npm install` to install TypeScript and Webpack and other packages.
