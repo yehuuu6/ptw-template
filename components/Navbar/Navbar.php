@@ -30,7 +30,7 @@ class Navbar extends Component
 
         $body = <<<HTML
         <!DOCTYPE html>
-            <html lang="tr">
+            <html lang="en">
             <head>
                 <meta charset="UTF-8">
                 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -39,6 +39,7 @@ class Navbar extends Component
                 <meta name="keywords" content="{$keywords}">
                 <meta name="author" content="{$author}">
                 <link rel="shortcut icon" href="{$favi}" type="image/x-icon">
+                <link rel="stylesheet" href="/dist/bundle.css">
                 <title>{$title}</title>
             </head>
             <body>
