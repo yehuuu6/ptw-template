@@ -15,10 +15,6 @@ class Footer extends Component
                 <footer class="footer">
                     <span>Footer component</span>
                 </footer>
-            </main>
-            <script src="/dist/bundle.js"></script>
-            </body>
-            </html>
         HTML;
 
         // Render the component on the page
