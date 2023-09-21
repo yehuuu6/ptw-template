@@ -4,7 +4,8 @@
   "description": "This is my template for web projects that uses PHP, TypeScript and Webpack and more.",
   "main": "index.ts",
   "scripts": {
-    "build": "webpack"
+    "dev": "webpack --mode development --watch",
+    "build": "webpack --mode production"
   },
   "keywords": [],
   "author": "sscorpi",
