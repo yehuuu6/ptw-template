@@ -8,7 +8,7 @@
     "build": "webpack --mode production"
   },
   "keywords": [],
-  "author": "sscorpi",
+  "author": "yehuuu6",
   "license": "ISC",
   "devDependencies": {
     "css-loader": "^6.8.1",
