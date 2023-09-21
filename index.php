@@ -5,12 +5,25 @@ require 'vendor/autoload.php';
 
 use Symfony\Component\Dotenv\Dotenv;
 use Components\Navbar\Navbar;
+use Components\Loader\Loader;
 use Components\Footer\Footer;
+use Components\Super\Head;
+use Components\Super\Legs;
 
 $dotenv = new Dotenv();
 $dotenv->load($_SERVER['DOCUMENT_ROOT'] . '/.env');
 
-$Navbar = new Navbar(["title" => "Template for PHP Projects - PTW Template"]);
+$stylesheets = [
+    "/dist/bundle.css",
+];
+
+$head = new Head(
+    [
+        "title" => "Template for PHP Projects - PTW Template",
+        "styles" => $stylesheets,
+    ]
+);
+$navbar = new Navbar();
 ?>
 
 <section class="content">
@@ -21,12 +34,20 @@ $Navbar = new Navbar(["title" => "Template for PHP Projects - PTW Template"]);
     </ul>
     <h2>API Test <a href="https://axios-http.com/" target="blank">(axios)</a></h2>
     <div class="api-test">
-        <button id="hello">Hello</button>
+        <button id="get-todo">Get Todo</button>
+        <button id="custom">Custom API</button>
         <button id="invalid">Invalid</button>
     </div>
-    <h3>Response;</h3>
-    <div id="api-response"></div>
+    <div class="response">
+        <div class="loader">
+            <?php $loader = new Loader(); ?>
+        </div>
+        <pre id="api-response"></pre>
+    </div>
     <a href="https://github.com/sscorpi/ptw-template" target="_blank">Souce Code</a>
 </section>
 
-<?php $Footer = new Footer(); ?>
+<?php
+$footer = new Footer();
+$legs = new Legs();
+?>
