@@ -8,13 +8,16 @@ module.exports = {
   watch: true,
   mode: "development",
   entry: {
-    bundle: path.resolve(__dirname, "src/index.ts"),
+    bundle: path.resolve(__dirname, "src/core/index.ts"),
   },
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].js",
   },
   resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
     extensions: [".ts", ".js"],
   },
   module: {
@@ -47,7 +50,7 @@ module.exports = {
           options: {
             encodeOptions: {
               jpeg: {
-                quality: 75,
+                quality: 70,
               },
               webp: {
                 lossless: true,
